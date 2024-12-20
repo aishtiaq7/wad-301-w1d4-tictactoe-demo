@@ -8,4 +8,4 @@ Below is the final version we want to achieve:
 ![Alt Text](./public/ss.png)
 
 
-Live URL : > 
+Live URL : [https://w1d4-tictactoe.vercel.app/](https://w1d4-tictactoe.vercel.app/)
