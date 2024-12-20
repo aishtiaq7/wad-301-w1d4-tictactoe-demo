@@ -61,7 +61,7 @@ function Board() {
     status = `Next player: ${xIsNext ? "X" : "O"}`;
   }
 
-  function onReset(){
+  function onReset() {
     setSquares(Array(9).fill(null));
     setXIsNext(true);
   }
