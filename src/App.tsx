@@ -49,14 +49,16 @@ function Board() {
     }
     setSquares(nextSquares);
     setXIsNext((prev) => !prev);
+  }
 
-    const winner = calculateWinner(squares);
-    let status: string = `Next player: ${xIsNext ? "X" : "O"}`;
-    if (winner) {
-      status = `Winner: ${winner}`;
-    } else {
-      status = `Next player: ${xIsNext ? "X" : "O"}`;
-    }
+  const winner = calculateWinner(squares);
+  let status: string = `Next player: ${xIsNext ? "X" : "O"}`;
+  if (winner) {
+    status = `Winner: ${winner}`;
+  } else if (!squares.includes(null)) {
+    status = "Draw";
+  } else {
+    status = `Next player: ${xIsNext ? "X" : "O"}`;
   }
 
   return (
