@@ -61,6 +61,11 @@ function Board() {
     status = `Next player: ${xIsNext ? "X" : "O"}`;
   }
 
+  function onReset(){
+    setSquares(Array(9).fill(null));
+    setXIsNext(true);
+  }
+
   return (
     <>
       <h1>Tic tac toe</h1>
@@ -79,6 +84,10 @@ function Board() {
         <Square value={squares[6]} onSquareClick={() => handleClick(6)} />
         <Square value={squares[7]} onSquareClick={() => handleClick(7)} />
         <Square value={squares[8]} onSquareClick={() => handleClick(8)} />
+      </div>
+
+      <div>
+        <button onClick={onReset}>Reset</button>
       </div>
     </>
   );
