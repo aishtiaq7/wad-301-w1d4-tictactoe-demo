@@ -68,7 +68,7 @@ function Board() {
 
   return (
     <>
-      <h1>Tic tac toe</h1>
+      <h1>TicTacToe Game</h1>
       <div className="status">{status}</div>
       <div className="board-row">
         <Square value={squares[0]} onSquareClick={() => handleClick(0)} />
@@ -87,7 +87,7 @@ function Board() {
       </div>
 
       <div>
-        <button onClick={onReset}>Reset</button>
+        <button className="reset-button" onClick={onReset}>Reset</button>
       </div>
     </>
   );
